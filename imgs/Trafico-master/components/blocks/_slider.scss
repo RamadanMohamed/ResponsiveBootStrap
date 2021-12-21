@@ -1,0 +1,103 @@
+.slider{
+    width: 100%;
+    display: flex;
+    height: auto;
+
+    .slider-content{
+        width: 100%;
+        display: grid;
+        height:auto;
+        grid-template-columns: 30% 60%;
+        padding-bottom: 1%;
+        position: relative;
+
+        @media (max-width: 1210px){ 
+            grid-template-columns: none;
+            grid-template-rows: 20%;
+        }
+
+        .text{
+            width: 100%;
+            min-height: 300px;
+            text-align:left;
+            padding-top: 18%;
+            padding-left: 7%;
+            font-family: "Helvetica Neue Greek Bold", serif;
+
+            @media (max-width: 600px){ 
+                width: 100%;
+            } 
+
+            @include h4;
+
+            @include h2;
+        }
+
+        .slider-bar{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+            padding-top: 20%;
+
+            @media (max-width: 1210px){ 
+                padding-left: 50px;
+            }
+
+            @media (max-width: 695px){ 
+                grid-template-columns: 100%;
+                row-gap: 10px;
+                padding: 50px;
+            }
+            
+
+            .card{ 
+                width: 100%;
+                height: auto;
+                padding:30px;
+                display: inline-block;
+                background-color: #fff;
+                border-radius: 10px;
+                padding-top:80px;
+
+                @media (max-width: 931px){ 
+                    width: 100%;
+                }
+
+                p{
+                    font-size: 16px;
+                    line-height: 30px;
+                    font-weight: 300;
+                    font-style: normal;
+                    color: #402B2B;
+                }
+
+                .client{
+                    width: 240px;
+                    height: 60px;
+                    padding:20px;
+                    display: flex;
+                    margin-top: 50px;
+
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 100%;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+
+                    span{
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        font-style: normal;
+                        color: #402B2B;
+                        margin-top: 15px;
+                        margin-left:10px;
+                    }
+                }
+            }
+        }
+    }
+}
